@@ -1,8 +1,8 @@
 plugins {
-    kotlin("jvm") version "2.0.20"
+    kotlin("jvm")
 }
 
-group = "dinesh.parmar.skills"
+group = "dp.problemsovle.skills.framework"
 version = "1.0"
 
 repositories {
@@ -11,7 +11,6 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
-    implementation(project(":dp.problemsovle.skills.framework"))
 }
 
 tasks.test {

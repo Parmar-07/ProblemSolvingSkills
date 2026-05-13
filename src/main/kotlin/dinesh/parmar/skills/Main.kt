@@ -1,9 +1,38 @@
 package dinesh.parmar.skills
 
-import dinesh.parmar.skills.core.ProblemTestRule
-import dinesh.parmar.skills.core.SolveProblems
+import dinesh.parmar.skills.problems.arrays.SeparateDigits
+import dinesh.parmar.skills.problems.numbers.PalindromeNumber
+import dp.problemsovle.skills.framework.registry.ProblemRegistry
+import dp.problemsovle.skills.framework.runner.ProblemRunner
 
 
+/**
+ * Application entry point for the Competitive Programming Framework.
+ *
+ * ## How to Add a New Problem
+ * 1. Create a class in the appropriate `problems/<category>/` package extending `Problem<I, O>`.
+ * 2. Register it here with `ProblemRegistry.register(YourProblem())`.
+ * 3. Run `main()` — tests execute, docs generate, README updates automatically.
+ *
+ * ## Running Options
+ * - `ProblemRunner.runAll()` — run every registered problem
+ * - `ProblemRunner.run(SomeProblem())` — run a single problem
+ * - `ProblemRunner.runCi(SomeProblem())` — CI mode: exits with code 1 on failure
+ */
 fun main() {
-    ProblemTestRule().testProblem(SolveProblems.Palindrome)
+    // ── Register all problems ──────────────────────────────────────────────────
+    // Add new problems here. Order determines README table insertion order.
+    ProblemRegistry.registerAll(
+        PalindromeNumber(),
+        SeparateDigits()
+    )
+
+    // ── Run all registered problems ────────────────────────────────────────────
+    // Passing problems automatically generate .md docs and update README.md
+    val allPassed = ProblemRunner.runAll(generateDocs = true)
+
+    // ── CI exit code ───────────────────────────────────────────────────────────
+    if (!allPassed) {
+        System.exit(1)
+    }
 }
