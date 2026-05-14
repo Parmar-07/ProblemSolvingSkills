@@ -3,6 +3,7 @@ package dinesh.parmar.skills
 import dinesh.parmar.skills.problems.arrays.ProductItSelf
 import dinesh.parmar.skills.problems.arrays.SeparateDigits
 import dinesh.parmar.skills.problems.numbers.PalindromeNumber
+import dinesh.parmar.skills.problems.strings.RemoveStarFromString
 import dp.problemsovle.skills.framework.registry.ProblemRegistry
 import dp.problemsovle.skills.framework.runner.ProblemRunner
 import kotlin.system.exitProcess
@@ -27,12 +28,14 @@ fun main() {
     ProblemRegistry.registerAll(
         PalindromeNumber(),
         SeparateDigits(),
-        ProductItSelf()
+        ProductItSelf(),
+        RemoveStarFromString()
     )
 
 
-    // ── Run specific problem ────────────────────────────────────────────
-    ProblemRunner.runCi(ProductItSelf())
+    // ── Run specific problem by Id ────────────────────────────────────────────
+    ProblemRegistry.getById(2390)?.let { ProblemRunner.runCi(it)  }
+
 
     /*
     // ── Run all registered problems ────────────────────────────────────────────

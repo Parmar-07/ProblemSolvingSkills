@@ -50,15 +50,6 @@ class ProductItSelf : Problem<IntArray,IntArray>(){
             .outputFormat("An array of individual digits in the original order.")
             .build()
 
-    /**
-     * Separates the digits of each number in [input] and returns them as a flat array.
-     *
-     * The implementation uses modulo arithmetic to extract digits in reverse order,
-     * then reverses each number's digit list before appending to the result.
-     *
-     * @param input An [IntArray] of positive integers.
-     * @return An [IntArray] of individual digits in the order they appear in [input].
-     */
     override fun solve(input: IntArray): IntArray {
 
         val n = input.size // Input: input = [1, 2, 3, 4], so n = 4
