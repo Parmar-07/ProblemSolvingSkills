@@ -6,6 +6,7 @@ import dp.problemsovle.skills.framework.model.Problem
 import dp.problemsovle.skills.framework.model.ProblemRunReport
 import dp.problemsovle.skills.framework.registry.ProblemRegistry
 import dp.problemsovle.skills.framework.result.TestResult
+import kotlin.system.exitProcess
 
 /**
  * Orchestrates the full problem execution pipeline for one or more problems.
@@ -84,7 +85,7 @@ object ProblemRunner {
     fun <I, O> runCi(problem: Problem<I, O>) {
         val passed = run(problem)
         if (!passed) {
-            System.exit(1)
+            exitProcess(1)
         }
     }
 

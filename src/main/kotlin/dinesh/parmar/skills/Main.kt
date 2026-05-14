@@ -1,9 +1,11 @@
 package dinesh.parmar.skills
 
+import dinesh.parmar.skills.problems.arrays.ProductItSelf
 import dinesh.parmar.skills.problems.arrays.SeparateDigits
 import dinesh.parmar.skills.problems.numbers.PalindromeNumber
 import dp.problemsovle.skills.framework.registry.ProblemRegistry
 import dp.problemsovle.skills.framework.runner.ProblemRunner
+import kotlin.system.exitProcess
 
 
 /**
@@ -24,15 +26,23 @@ fun main() {
     // Add new problems here. Order determines README table insertion order.
     ProblemRegistry.registerAll(
         PalindromeNumber(),
-        SeparateDigits()
+        SeparateDigits(),
+        ProductItSelf()
     )
 
+
+    // ── Run specific problem ────────────────────────────────────────────
+    ProblemRunner.runCi(ProductItSelf())
+
+    /*
     // ── Run all registered problems ────────────────────────────────────────────
     // Passing problems automatically generate .md docs and update README.md
     val allPassed = ProblemRunner.runAll(generateDocs = true)
 
     // ── CI exit code ───────────────────────────────────────────────────────────
     if (!allPassed) {
-        System.exit(1)
-    }
+        exitProcess(1)
+    }*/
+
+
 }
