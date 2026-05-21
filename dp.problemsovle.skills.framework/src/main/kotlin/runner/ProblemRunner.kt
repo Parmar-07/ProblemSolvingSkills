@@ -82,8 +82,8 @@ object ProblemRunner {
      *
      * @param problem The problem instance to run.
      */
-    fun <I, O> runCi(problem: Problem<I, O>) {
-        val passed = run(problem)
+    fun <I, O> runCi(problem: Problem<I, O>, generateDocs: Boolean = true) {
+        val passed = run(problem, generateDocs)
         if (!passed) {
             exitProcess(1)
         }

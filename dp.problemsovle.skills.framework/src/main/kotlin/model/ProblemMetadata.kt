@@ -101,17 +101,3 @@ enum class Tag(val displayName: String) {
     NUMBER_THEORY("Number Theory")
 }
 
-/** Sample usages referenced by KDoc `@sample` tags. */
-private object ProblemMetadataSamples {
-    fun basic() {
-        val meta = ProblemMetadata(
-            id = 1,
-            title = "Two Sum",
-            difficulty = Difficulty.EASY,
-            tags = setOf(Tag.ARRAY, Tag.HASH_MAP),
-            url = "https://leetcode.com/problems/two-sum/"
-        )
-        println(meta.slug)       // "two-sum"
-        println(meta.displayName) // "1. Two Sum"
-    }
-}

@@ -1,9 +1,11 @@
 package dinesh.parmar.skills
 
+import dinesh.parmar.skills.problems.Practice
 import dinesh.parmar.skills.problems.arrays.ProductItSelf
 import dinesh.parmar.skills.problems.arrays.SeparateDigits
 import dinesh.parmar.skills.problems.numbers.PalindromeNumber
 import dinesh.parmar.skills.problems.strings.RemoveStarFromString
+import dinesh.parmar.skills.problems.strings.ValidParantheses
 import dp.problemsovle.skills.framework.registry.ProblemRegistry
 import dp.problemsovle.skills.framework.runner.ProblemRunner
 import kotlin.system.exitProcess
@@ -29,12 +31,15 @@ fun main() {
         PalindromeNumber(),
         SeparateDigits(),
         ProductItSelf(),
-        RemoveStarFromString()
+        RemoveStarFromString(),
+        ValidParantheses(),
     )
 
+    // ── Run specific problem ────────────────────────────────────────────
+    //ProblemRunner.run(Practice(), generateDocs = false)
 
     // ── Run specific problem by Id ────────────────────────────────────────────
-    ProblemRegistry.getById(2390)?.let { ProblemRunner.runCi(it)  }
+    ProblemRegistry.getById(20)?.let { ProblemRunner.runCi(it)  }
 
 
     /*
