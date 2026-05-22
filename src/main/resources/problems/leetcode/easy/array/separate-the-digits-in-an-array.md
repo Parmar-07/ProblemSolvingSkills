@@ -70,12 +70,12 @@ Output: [7, 1, 3, 9]
 
 | # | Input | Expected | Actual | Status | Time (ms) |
 |---|-------|----------|--------|--------|-----------|
-| 1 | `[13, 25, 83, 77]` | `[1, 3, 2, 5, 8, 3, 7, 7]` | `[1, 3, 2, 5, 8, 3, 7, 7]` | ✅ PASS | 5.979 |
-| 2 | `[7, 1, 3, 9]` | `[7, 1, 3, 9]` | `[7, 1, 3, 9]` | ✅ PASS | 0.018 |
+| 1 | `[13, 25, 83, 77]` | `[1, 3, 2, 5, 8, 3, 7, 7]` | `[1, 3, 2, 5, 8, 3, 7, 7]` | ✅ PASS | 0.061 |
+| 2 | `[7, 1, 3, 9]` | `[7, 1, 3, 9]` | `[7, 1, 3, 9]` | ✅ PASS | 0.011 |
 
 **2/2 tests passed** ✅
 
 ---
 
-*Generated on 2026-05-13*
+*Generated on 2026-05-23*
 *Source: [https://leetcode.com/problems/separate-the-digits-in-an-array/](https://leetcode.com/problems/separate-the-digits-in-an-array/)*

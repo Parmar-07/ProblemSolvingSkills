@@ -1,7 +1,7 @@
 package dinesh.parmar.skills.problems.list
 
 import builder.ProblemStatementBuilder
-import dinesh.parmar.skills.models.ListNode
+import dinesh.parmar.skills.input.ListNode
 import dp.problemsovle.skills.framework.model.*
 
 class MergeListNodes : Problem<Pair<ListNode?,ListNode?>, ListNode?>()  {
@@ -12,7 +12,7 @@ class MergeListNodes : Problem<Pair<ListNode?,ListNode?>, ListNode?>()  {
             id = 21,
             title = "Merge Two Sorted Lists",
             difficulty = Difficulty.EASY,
-            tags = setOf(Tag.LINKED_LIST, Tag.SORTING),
+            tags = setOf(Tag.SORTING,Tag.LINKED_LIST),
             url = "https://leetcode.com/problems/merge-two-sorted-lists"
         )
 
@@ -60,6 +60,9 @@ class MergeListNodes : Problem<Pair<ListNode?,ListNode?>, ListNode?>()  {
                 input = Pair(null,ListNode(0)),
                 expected = ListNode(0)
             )
+            .constraints("The number of nodes in both lists is in the range [0, 50].")
+            .constraints("-100 <= Node.val <= 100")
+            .constraints("Both list1 and list2 are sorted in non-decreasing order.")
             .build()
 
     override fun solve(input: Pair<ListNode?,ListNode?>): ListNode? {

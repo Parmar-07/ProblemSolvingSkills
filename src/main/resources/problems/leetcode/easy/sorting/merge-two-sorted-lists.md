@@ -1,6 +1,6 @@
 # 21. Merge Two Sorted Lists
 
-![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen) ![Platform](https://img.shields.io/badge/Platform-LeetCode-blue) ![Linked List](https://img.shields.io/badge/-Linked%20List-blueviolet) ![Sorting](https://img.shields.io/badge/-Sorting-blueviolet) 
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen) ![Platform](https://img.shields.io/badge/Platform-LeetCode-blue) ![Sorting](https://img.shields.io/badge/-Sorting-blueviolet) ![Linked List](https://img.shields.io/badge/-Linked%20List-blueviolet) 
 
 ## Problem Statement
 
@@ -38,6 +38,12 @@ Output: [0]
 ```
 
 **
+
+## Constraints
+
+- `The number of nodes in both lists is in the range [0, 50].`
+- `-100 <= Node.val <= 100`
+- `Both list1 and list2 are sorted in non-decreasing order.`
 
 ## Solution
 
@@ -94,13 +100,13 @@ override fun solve(input: Pair<ListNode?,ListNode?>): ListNode? {
 
 | # | Input | Expected | Actual | Status | Time (ms) |
 |---|-------|----------|--------|--------|-----------|
-| 1 | `([1,1,2,3,4,4], [1,2,3,4,4])` | `[1,1,2,3,4,4]` | `[1,1,2,3,4,4]` | ✅ PASS | 0.869 |
-| 2 | `(null, null)` | `null` | `null` | ✅ PASS | 0.002 |
+| 1 | `([1,1,2,3,4,4], [1,2,3,4,4])` | `[1,1,2,3,4,4]` | `[1,1,2,3,4,4]` | ✅ PASS | 0.026 |
+| 2 | `(null, null)` | `null` | `null` | ✅ PASS | 0.001 |
 | 3 | `(null, [0])` | `[0]` | `[0]` | ✅ PASS | 0.001 |
 
 **3/3 tests passed** ✅
 
 ---
 
-*Generated on 2026-05-22*
+*Generated on 2026-05-23*
 *Source: [https://leetcode.com/problems/merge-two-sorted-lists](https://leetcode.com/problems/merge-two-sorted-lists)*

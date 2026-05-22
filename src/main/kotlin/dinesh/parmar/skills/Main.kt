@@ -3,6 +3,7 @@ package dinesh.parmar.skills
 import dinesh.parmar.skills.problems.Practice
 import dinesh.parmar.skills.problems.arrays.ProductItSelf
 import dinesh.parmar.skills.problems.arrays.SeparateDigits
+import dinesh.parmar.skills.problems.arrays.TwoSumEqualsTargetFindIndexes
 import dinesh.parmar.skills.problems.list.MergeListNodes
 import dinesh.parmar.skills.problems.numbers.PalindromeNumber
 import dinesh.parmar.skills.problems.strings.RemoveStarFromString
@@ -34,25 +35,28 @@ fun main() {
         ProductItSelf(),
         RemoveStarFromString(),
         ValidParantheses(),
-        MergeListNodes()
+        MergeListNodes(),
+        TwoSumEqualsTargetFindIndexes(),
     )
 
     // ── Run specific problem ────────────────────────────────────────────
-    //ProblemRunner.run(Practice(), generateDocs = false)
+   // ProblemRunner.run(Practice(), generateDocs = false)
 
     // ── Run specific problem by Id ────────────────────────────────────────────
-     ProblemRegistry.getById(21)?.let { ProblemRunner.runCi(it)  }
+    ProblemRegistry.getById(1)?.let { ProblemRunner.runCi(it)  }
 
 
-    /*
+/*
+
     // ── Run all registered problems ────────────────────────────────────────────
-    // Passing problems automatically generate .md docs and update README.md
+    /// Passing problems automatically generate .md docs and update README.md
     val allPassed = ProblemRunner.runAll(generateDocs = true)
 
     // ── CI exit code ───────────────────────────────────────────────────────────
     if (!allPassed) {
         exitProcess(1)
-    }*/
+    }
+*/
 
 
 }

@@ -97,12 +97,12 @@ override fun solve(input: String): String {
 
 | # | Input | Expected | Actual | Status | Time (ms) |
 |---|-------|----------|--------|--------|-----------|
-| 1 | `leet**cod*e` | `lecoe` | `lecoe` | ✅ PASS | 6.442 |
-| 2 | `erase*****` | `` | `` | ✅ PASS | 0.017 |
+| 1 | `leet**cod*e` | `lecoe` | `lecoe` | ✅ PASS | 3.512 |
+| 2 | `erase*****` | `` | `` | ✅ PASS | 0.009 |
 
 **2/2 tests passed** ✅
 
 ---
 
-*Generated on 2026-05-14*
+*Generated on 2026-05-23*
 *Source: [https://leetcode.com/problems/removing-stars-from-a-string/](https://leetcode.com/problems/removing-stars-from-a-string/)*

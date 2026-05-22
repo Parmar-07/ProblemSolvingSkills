@@ -112,12 +112,12 @@ for (i in input.indices.reversed()) { // i = 3 to 0
 
 | # | Input | Expected | Actual | Status | Time (ms) |
 |---|-------|----------|--------|--------|-----------|
-| 1 | `[1, 2, 3, 4]` | `[24, 12, 8, 6]` | `[24, 12, 8, 6]` | ✅ PASS | 0.883 |
-| 2 | `[-1, 1, 0, -3, 3]` | `[0, 0, 9, 0, 0]` | `[0, 0, 9, 0, 0]` | ✅ PASS | 0.004 |
+| 1 | `[1, 2, 3, 4]` | `[24, 12, 8, 6]` | `[24, 12, 8, 6]` | ✅ PASS | 0.014 |
+| 2 | `[-1, 1, 0, -3, 3]` | `[0, 0, 9, 0, 0]` | `[0, 0, 9, 0, 0]` | ✅ PASS | 0.001 |
 
 **2/2 tests passed** ✅
 
 ---
 
-*Generated on 2026-05-14*
+*Generated on 2026-05-23*
 *Source: [https://leetcode.com/problems/product-of-array-except-self/](https://leetcode.com/problems/product-of-array-except-self/)*

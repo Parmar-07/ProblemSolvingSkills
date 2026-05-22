@@ -98,15 +98,15 @@ override fun solve(input: String): Boolean {
 
 | # | Input | Expected | Actual | Status | Time (ms) |
 |---|-------|----------|--------|--------|-----------|
-| 1 | `()` | `true` | `true` | ✅ PASS | 2.055 |
-| 2 | `()[]{}` | `true` | `true` | ✅ PASS | 0.042 |
-| 3 | `(]` | `false` | `false` | ✅ PASS | 0.008 |
-| 4 | `([])` | `true` | `true` | ✅ PASS | 0.008 |
-| 5 | `([)]` | `false` | `false` | ✅ PASS | 0.007 |
+| 1 | `()` | `true` | `true` | ✅ PASS | 0.272 |
+| 2 | `()[]{}` | `true` | `true` | ✅ PASS | 0.017 |
+| 3 | `(]` | `false` | `false` | ✅ PASS | 0.006 |
+| 4 | `([])` | `true` | `true` | ✅ PASS | 0.015 |
+| 5 | `([)]` | `false` | `false` | ✅ PASS | 0.005 |
 
 **5/5 tests passed** ✅
 
 ---
 
-*Generated on 2026-05-21*
+*Generated on 2026-05-23*
 *Source: [https://leetcode.com/problems/valid-parentheses/](https://leetcode.com/problems/valid-parentheses/)*

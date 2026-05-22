@@ -1,10 +1,10 @@
 package dinesh.parmar.skills.problems
 
 import builder.ProblemStatementBuilder
-import dinesh.parmar.skills.models.ListNode
+import dinesh.parmar.skills.input.TwoSum
 import dp.problemsovle.skills.framework.model.*
 
-class Practice : Problem<Pair<ListNode?,ListNode?>, ListNode?>()  {
+class Practice : Problem<TwoSum, IntArray>()  {
 
 
     override val metadata: ProblemMetadata
@@ -16,65 +16,37 @@ class Practice : Problem<Pair<ListNode?,ListNode?>, ListNode?>()  {
             url = ""
         )
 
-    override val statement: ProblemStatement<Pair<ListNode?,ListNode?>, ListNode?> =
-        ProblemStatementBuilder<Pair<ListNode?,ListNode?>, ListNode?>()
+    override val statement: ProblemStatement<TwoSum, IntArray> =
+        ProblemStatementBuilder<TwoSum, IntArray>()
             .description(
                 "Practice"
             )
             .example(
                 explanation = "",
-                input = Pair(
-                    ListNode(1).apply {
-                        next = ListNode(2).apply {
-                            next = ListNode(4)
-                        }
-                    },
-                    ListNode(1).apply {
-                        next = ListNode(3).apply {
-                            next = ListNode(4)
-                        }
-                    }),
-                expected = ListNode(1).apply {
-                    next = ListNode(1).apply {
-                        next = ListNode(2).apply {
-                            next = ListNode(3).apply {
-                                next = ListNode(4).apply {
-                                    next = ListNode(4)
-                                }
-                            }
-                        }
-                    }
-                }
+                input = TwoSum(
+                    intArrayOf(2,7,11,5),9),
+                expected = intArrayOf(0,1)
             )
             .build()
 
-    override fun solve(input: Pair<ListNode?,ListNode?>): ListNode? {
-        var tvL1 = input.first
-        var tvL2 = input.second
+    override fun solve(input: TwoSum): IntArray {
+        val mapIndexValue = hashMapOf<Int,Int>()
 
-        val result = ListNode(-1)
-        var traverse = result
+        val array = input.array
+        val target = input.target
 
-        while (tvL1!=null && tvL2!=null){
+        for (index in array.indices) {
 
-            if (tvL1.value <= tvL2.value){
-                traverse.next = tvL1
-                tvL1 = tvL1.next
-            }else {
-                traverse.next = tvL2
-                tvL2 = tvL2.next
+            val current = array[index]
+            val need =  target - current
+
+            if (mapIndexValue.containsKey(need)){
+                return intArrayOf(mapIndexValue[need]!!,index)
             }
-            traverse = traverse.next!!
+
+            mapIndexValue[current] = index
         }
 
-        if (tvL1!=null){
-            traverse.next = tvL1
-        }
-
-        if (tvL2!=null){
-            traverse.next = tvL2
-        }
-
-        return result.next!!
+        return intArrayOf()
     }
 }

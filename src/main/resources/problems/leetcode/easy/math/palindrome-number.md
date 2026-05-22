@@ -88,8 +88,8 @@ override fun solve(input: Int): Boolean {
 
 | # | Input | Expected | Actual | Status | Time (ms) |
 |---|-------|----------|--------|--------|-----------|
-| 1 | `121` | `true` | `true` | ✅ PASS | 0.933 |
-| 2 | `-121` | `false` | `false` | ✅ PASS | 0.001 |
+| 1 | `121` | `true` | `true` | ✅ PASS | 1.093 |
+| 2 | `-121` | `false` | `false` | ✅ PASS | 0.002 |
 | 3 | `10` | `false` | `false` | ✅ PASS | 0.001 |
 | 4 | `0` | `true` | `true` | ✅ PASS | 0.001 |
 
@@ -97,5 +97,5 @@ override fun solve(input: Int): Boolean {
 
 ---
 
-*Generated on 2026-05-13*
+*Generated on 2026-05-23*
 *Source: [https://leetcode.com/problems/palindrome-number/](https://leetcode.com/problems/palindrome-number/)*

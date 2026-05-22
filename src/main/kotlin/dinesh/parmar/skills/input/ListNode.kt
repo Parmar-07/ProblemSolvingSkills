@@ -1,4 +1,4 @@
-package dinesh.parmar.skills.models
+package dinesh.parmar.skills.input
 
 class ListNode(val value : Int) {
     var next : ListNode?=null
