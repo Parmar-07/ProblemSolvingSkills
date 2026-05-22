@@ -1,9 +1,12 @@
 package dinesh.parmar.skills.problems
 
 import builder.ProblemStatementBuilder
+import dinesh.parmar.skills.models.ListNode
 import dp.problemsovle.skills.framework.model.*
 
-class Practice : Problem<String, Boolean>()  {
+class Practice : Problem<Pair<ListNode?,ListNode?>, ListNode?>()  {
+
+
     override val metadata: ProblemMetadata
         get() = ProblemMetadata(
             id = 0,
@@ -13,36 +16,65 @@ class Practice : Problem<String, Boolean>()  {
             url = ""
         )
 
-    override val statement: ProblemStatement<String, Boolean> =
-        ProblemStatementBuilder<String, Boolean>()
+    override val statement: ProblemStatement<Pair<ListNode?,ListNode?>, ListNode?> =
+        ProblemStatementBuilder<Pair<ListNode?,ListNode?>, ListNode?>()
             .description(
                 "Practice"
             )
             .example(
                 explanation = "",
-                input = "(]",
-                expected = false
+                input = Pair(
+                    ListNode(1).apply {
+                        next = ListNode(2).apply {
+                            next = ListNode(4)
+                        }
+                    },
+                    ListNode(1).apply {
+                        next = ListNode(3).apply {
+                            next = ListNode(4)
+                        }
+                    }),
+                expected = ListNode(1).apply {
+                    next = ListNode(1).apply {
+                        next = ListNode(2).apply {
+                            next = ListNode(3).apply {
+                                next = ListNode(4).apply {
+                                    next = ListNode(4)
+                                }
+                            }
+                        }
+                    }
+                }
             )
             .build()
 
-    override fun solve(input: String): Boolean {
+    override fun solve(input: Pair<ListNode?,ListNode?>): ListNode? {
+        var tvL1 = input.first
+        var tvL2 = input.second
 
-        val stack = mutableListOf<Char>()
-        val mapKeys = mapOf('(' to ')', '[' to ']', '{' to '}')
+        val result = ListNode(-1)
+        var traverse = result
 
+        while (tvL1!=null && tvL2!=null){
 
-        for(char in input) {
-
-            if (char in mapKeys.keys)
-            {
-                stack.add(char)
-            } else if (stack.isNotEmpty() && mapKeys[stack.last()] == char){
-                stack.removeAt(stack.size -1)
-            }else{
-                return false
+            if (tvL1.value <= tvL2.value){
+                traverse.next = tvL1
+                tvL1 = tvL1.next
+            }else {
+                traverse.next = tvL2
+                tvL2 = tvL2.next
             }
+            traverse = traverse.next!!
         }
 
-        return stack.isEmpty()
+        if (tvL1!=null){
+            traverse.next = tvL1
+        }
+
+        if (tvL2!=null){
+            traverse.next = tvL2
+        }
+
+        return result.next!!
     }
 }

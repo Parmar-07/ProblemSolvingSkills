@@ -3,6 +3,7 @@ package dinesh.parmar.skills
 import dinesh.parmar.skills.problems.Practice
 import dinesh.parmar.skills.problems.arrays.ProductItSelf
 import dinesh.parmar.skills.problems.arrays.SeparateDigits
+import dinesh.parmar.skills.problems.list.MergeListNodes
 import dinesh.parmar.skills.problems.numbers.PalindromeNumber
 import dinesh.parmar.skills.problems.strings.RemoveStarFromString
 import dinesh.parmar.skills.problems.strings.ValidParantheses
@@ -33,13 +34,14 @@ fun main() {
         ProductItSelf(),
         RemoveStarFromString(),
         ValidParantheses(),
+        MergeListNodes()
     )
 
     // ── Run specific problem ────────────────────────────────────────────
     //ProblemRunner.run(Practice(), generateDocs = false)
 
     // ── Run specific problem by Id ────────────────────────────────────────────
-    ProblemRegistry.getById(20)?.let { ProblemRunner.runCi(it)  }
+     ProblemRegistry.getById(21)?.let { ProblemRunner.runCi(it)  }
 
 
     /*
